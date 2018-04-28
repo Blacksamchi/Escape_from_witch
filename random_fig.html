@@ -7,10 +7,21 @@
   <body>
 
    <script type="text/javascript">
-         var result = Math.floor(Math.random() * 10) + 1;
-      document.write(result);
 
-   </script>
+ // 1에서 18까지 범위의 정수를 랜덤하게 2개 출력
+ for (var i = 1; i <= 2; i++)
+   document.write(randomRange(1, 18), '<br />');
+   ran_fig = randomRange(1,18);
+   document.write(ran_fig);
+
+ // 지정된 범위의 정수 1개를 랜덤하게 반환하는 함수
+ // n1 은 "하한값", n2 는 "상한값"
+ function randomRange(n1, n2) {
+   return Math.floor( (Math.random() * (n2 - n1 + 1)) + n1 );
+ }
+
+ 
+  </script>
 
   </body>
 </html>
